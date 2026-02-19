@@ -55,7 +55,7 @@ public class CustomerRepositoryImpl implements CustomerRepository {
     }
 
     @Override
-    public CustomerDto searchCustomer(String id) {
+    public CustomerDto searchCustomerById(String id) {
         String sql = "SELECT * FROM customer WHERE CustID=?";
         return jdbcTemplate.queryForObject(sql, (rs, rowNum) -> {
             CustomerDto customerDto = new CustomerDto();
