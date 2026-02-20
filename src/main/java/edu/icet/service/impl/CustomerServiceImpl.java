@@ -29,8 +29,8 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public CustomerDto searchCustomer(String id) {
-        return customerRepository.searchCustomer(id);
+    public CustomerDto searchCustomerById(String id) {
+        return customerRepository.searchCustomerById(id);
     }
 
     @Override
