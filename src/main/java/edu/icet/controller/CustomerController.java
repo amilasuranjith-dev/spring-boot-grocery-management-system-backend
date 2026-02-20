@@ -25,7 +25,7 @@ public class CustomerController {
         return customerService.updateCustomer(customerDto);
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/delete-by-id/{id}")
     public boolean deleteCustomer(@PathVariable String id){
         return customerService.deleteCustomer(id);
     }

@@ -61,7 +61,7 @@ public class ItemRepositoryImpl implements ItemRepository {
     @Override
     public List<ItemDto> getAll() {
         String sql = "SELECT * FROM item";
-        List<ItemDto> itemDtoArrayList = jdbcTemplate.query(sql, (rs, rowNum)-> {
+        List<ItemDto> itemDtoList = jdbcTemplate.query(sql, (rs, rowNum)-> {
             ItemDto itemDto = new ItemDto();
             itemDto.setId(rs.getString(1));
             itemDto.setDescription(rs.getString(2));
@@ -70,7 +70,7 @@ public class ItemRepositoryImpl implements ItemRepository {
             itemDto.setQty(rs.getInt(5));
             return itemDto;
         });
-        return itemDtoArrayList;
+        return itemDtoList;
 
     }
 }
